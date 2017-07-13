@@ -28,7 +28,7 @@ app.get('/', function (req, res) {
 	var url = require('url');
 	var url_parts = url.parse(request.url, true);
 	var query = url_parts.query;
-	var hub_challenge = req.query.hub_challenge
+	var hub_challenge = req.query.hub.challenge
 	res.send(hub_challenge)
 })
 
