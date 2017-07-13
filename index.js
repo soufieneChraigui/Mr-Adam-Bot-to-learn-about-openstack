@@ -26,10 +26,10 @@ app.use(bodyParser.json())
 // index
 app.get('/', function (req, res) {
 	var url = require('url');
-	//var url_parts = url.parse(request.url, true);
+	var url_parts = url.parse(request.url, true);
 	//var query = url_parts.query;
 	//var hub_challenge = req.query.hub_challenge;
-	res.send("12356848");
+	res.send("000000");
 })
 
 // for facebook verification
