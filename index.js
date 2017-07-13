@@ -30,7 +30,7 @@ app.get('/', function (req, res) {
 	//var url_parts = url.parse(request.url, true);
 	//var query = url_parts.query;
 	//var hub_challenge = req.query.hub_challenge;
-	res.send(url_parts);
+	res.send(url);
 })
 
 // for facebook verification
