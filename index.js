@@ -25,7 +25,8 @@ app.use(bodyParser.json())
 
 // index
 app.get('/', function (req, res) {
-	res.send(333333);
+	res.send(req.query['hub.challenge'])
+	//	res.send('hello world i am a secret bot')
 })
 
 // for facebook verification
