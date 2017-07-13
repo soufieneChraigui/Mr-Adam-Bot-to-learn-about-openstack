@@ -33,8 +33,8 @@ app.get('/', function (req, res) {
 			hub_challenge: {hub_challenge:hub_challenge},
 			//message: messageData,
 		}
-	res.send(22222222);
 	}
+	res.send(22222222);
 })
 
 // for facebook verification
