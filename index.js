@@ -25,16 +25,7 @@ app.use(bodyParser.json())
 
 // index
 app.get('/', function (req, res) {
-	request({
-		url: 'https://graph.facebook.com/v2.6/me/messages',
-		qs: {access_token:token},
-		method: 'GET',
-		json: {
-			hub_challenge: {hub_challenge:hub_challenge},
-			//message: messageData,
-		}
-	}
-	res.send(22222222);
+	res.send(333333);
 })
 
 // for facebook verification
