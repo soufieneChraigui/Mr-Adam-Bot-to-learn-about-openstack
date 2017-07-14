@@ -26,10 +26,11 @@ app.use(bodyParser.json())
 // index
 app.get('/', function (req, res) {
 	res.send(req.query['hub.challenge'])
-	//	res.send('hello world i am a secret bot')
+	//res.send('hello world i am a secret bot')
 })
 
 // for facebook verification
+/*******
 app.get('/webhook/', function (req, res) {
 	if (req.query['hub.verify_token'] === 'my_voice_is_my_password_verify_me') {
 		res.send(req.query['hub.challenge'])
@@ -37,7 +38,7 @@ app.get('/webhook/', function (req, res) {
 		res.send('Error, wrong token')
 	}
 })
-
+/*****************/
 // to post data
 app.post('/webhook/', function (req, res) {
 	let messaging_events = req.body.entry[0].messaging
@@ -62,7 +63,13 @@ app.post('/webhook/', function (req, res) {
 	res.sendStatus(200)
 })
 
+/*********************************************************/
+// Spin up the server
+app.listen(app.get('port'), function() {
+	console.log('running on port', app.get('port'))
+/*********************************************************/
 
+/*
 // recommended to inject access tokens as environmental variables, e.g.
 // const token = process.env.FB_PAGE_ACCESS_TOKEN
 const token = "<FB_PAGE_ACCESS_TOKEN>"
